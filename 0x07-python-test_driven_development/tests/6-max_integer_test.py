@@ -1,10 +1,12 @@
 #!/usr/bin/python3
+"""Unittests for max_integer([..])."""
 
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
-class Testmaxinteger(unittest.TestCase):
-        """Define unittests for max_integer([..])."""
+
+class TestMaxInteger(unittest.TestCase):
+    """Define unittests for max_integer([..])."""
 
     def test_ordered_list(self):
         """Test an ordered list of integers."""
@@ -43,13 +45,12 @@ class Testmaxinteger(unittest.TestCase):
 
     def test_string(self):
         """Test a string."""
-        string = "saheed"
+        string = "Brennan"
         self.assertEqual(max_integer(string), 'r')
-
 
     def test_list_of_strings(self):
         """Test a list of strings."""
-        strings = ["Ehoneah", "is", "my", "name"]
+        strings = ["Brennan", "is", "my", "name"]
         self.assertEqual(max_integer(strings), "name")
 
     def test_empty_string(self):
